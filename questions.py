@@ -43,3 +43,4 @@ while attempts > 0:
         print()
 else:
     print(f"¡Perdiste! La palabra era: {word}")
+'asdasdsa'
