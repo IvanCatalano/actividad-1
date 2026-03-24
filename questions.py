@@ -1,5 +1,6 @@
 import random
-words = [
+dic = {
+   '1' : [
         "python",
         "programa",
         "variable",
@@ -7,9 +8,23 @@ words = [
         "bucle",
         "cadena",
         "entero",
-        "lista",
-]
-word = random.choice(words)
+        "lista"
+        ] ,
+    '2' : [
+       "rojo", "azul", "verde", "amarillo", "naranja", "violeta", "negro", "blanco"
+    ] ,
+    '3' : [
+       "argentina", "brasil", "chile", "uruguay", "paraguay", "bolivia", "peru", "colombia"
+    ]
+    }
+while True :
+    print('Categorias disponibles : \n1 : "Programacion"\n2 : "Colores"\n3 : "Paises"')
+    seleccion = input('Seleccione el numero de la categoria que quiera jugar : ')
+    if not seleccion.isdigit() or int(seleccion) < 1 or int(seleccion) > 3:
+       print('El numero esta fuera de las categorias disponibles')
+    else :
+       break
+word = random.choice(dic[str(seleccion)])
 guessed = []
 attempts = 6
 point = 0
